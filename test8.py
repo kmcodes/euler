@@ -1,6 +1,6 @@
 import time
 start = time.time()
-
+##############################################
 num='\
 73167176531330624919225119674426574742355349194934\
 96983520312774506326239578318016984801869478851843\
@@ -34,6 +34,6 @@ for i in range(len(num)-12):
     if prod > biggest:
         biggest=prod
 print biggest    
-        
+#################################################        
 elapsed = (time.time() - start)
 print("This code took: " + str(elapsed) + " seconds")   
