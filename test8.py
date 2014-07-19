@@ -37,7 +37,3 @@ print biggest
         
 elapsed = (time.time() - start)
 print("This code took: " + str(elapsed) + " seconds")   
-        
-    
-    
-    
