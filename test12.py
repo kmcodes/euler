@@ -22,7 +22,7 @@ while True:
     #print i
     triang=triangular_number(i)
     divisors=factors(triang)
-    #print len(divisors)
+    print len(divisors)
     if len(divisors)>500:
         break
     
