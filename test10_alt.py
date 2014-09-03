@@ -1,3 +1,5 @@
+import time
+start = time.time()
 def eratosthenes2(n):
     sum=0
     multiples = set()
@@ -9,3 +11,5 @@ def eratosthenes2(n):
     return sum
  
 print eratosthenes2(2000000)
+elapsed = (time.time() - start)
+print("This code took: " + str(elapsed) + " seconds") 
