@@ -4,37 +4,33 @@ start = time.time()
 def triangular_number(num):
     sum=0
     for i in xrange(1,num+1):
-        sum+=i
+        sum+=i 
+
     return sum
 
-def factors(num):
-    factor_list=[1]
-    for i in xrange(2,num):
+def factors_len(num):
+    factor_list=[]
+    for i in xrange(1,(int(num**0.5)+1)):
         if num%i==0:
             factor_list.append(i)
-    else:
-        factor_list.append(num)
-    return factor_list        
+            factor_list.append(num/i)
+    
+    return len(factor_list)
 
-i=0        
+i=1
+max=0 
+
 while True:
     i+=1
     #print i
     triang=triangular_number(i)
-    divisors=factors(triang)
-    print len(divisors)
-    if len(divisors)>500:
+    if factors_len(triang)> max:
+        max = factors_len(triang)
+        print max
+    if max>500:
         break
-    
         
-print triangular_number(i)    
-    
-
-
-
-
-
-
+print triang 
 ###################################
 elapsed = (time.time() - start)
-print("This code took: " + str(elapsed) + " seconds")
+print("This code took: " + str(elapsed) + " seconds") 
